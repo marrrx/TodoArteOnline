@@ -1,6 +1,7 @@
 {
   "name": "todoarteonline",
   "private": true,
+  "homepage": "https://marrrx.github.io/TodoArteOnline/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
