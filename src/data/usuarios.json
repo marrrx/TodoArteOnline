@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan Pérez",
+      "email": "juan@example.com",
+      "telefono": "123456789",
+      "direccion": "Calle Principal 123"
+    },
+    {
+      "id": 2,
+      "nombre": "María García",
+      "email": "maria@example.com",
+      "telefono": "987654321",
+      "direccion": "Avenida Central 456"
+    },
+    {
+      "id": 3,
+      "nombre": "Pedro Rodríguez",
+      "email": "pedro@example.com",
+      "telefono": "567890123",
+      "direccion": "Plaza Mayor 789"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana Martínez",
+      "email": "ana@example.com",
+      "telefono": "234567890",
+      "direccion": "Calle Secundaria 321"
+    },
+    {
+      "id": 5,
+      "nombre": "Laura López",
+      "email": "laura@example.com",
+      "telefono": "890123456",
+      "direccion": "Calle Lateral 567"
+    },
+    {
+      "id": 6,
+      "nombre": "David Sánchez",
+      "email": "david@example.com",
+      "telefono": "345678901",
+      "direccion": "Avenida Periférica 234"
+    },
+    {
+      "id": 7,
+      "nombre": "Carmen Gómez",
+      "email": "carmen@example.com",
+      "telefono": "012345678",
+      "direccion": "Paseo de la Reforma 890"
+    },
+    {
+      "id": 8,
+      "nombre": "Javier González",
+      "email": "javier@example.com",
+      "telefono": "678901234",
+      "direccion": "Ronda de la Victoria 567"
+    },
+    {
+      "id": 9,
+      "nombre": "Marta Díaz",
+      "email": "marta@example.com",
+      "telefono": "901234567",
+      "direccion": "Avenida del Sol 123"
+    },
+    {
+      "id": 10,
+      "nombre": "Antonio Ruiz",
+      "email": "antonio@example.com",
+      "telefono": "456789012",
+      "direccion": "Calle Real 890"
+    }
+  ]
+  

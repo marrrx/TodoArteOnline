@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "cliente": "Juan Pérez",
+      "estado": "pendiente",
+      "total": 50.99
+    },
+    {
+      "id": 2,
+      "cliente": "María García",
+      "estado": "entregada",
+      "total": 120.50
+    },
+    {
+      "id": 3,
+      "cliente": "Pedro Rodríguez",
+      "estado": "pendiente",
+      "total": 75.25
+    },
+    {
+      "id": 4,
+      "cliente": "Ana Martínez",
+      "estado": "en proceso",
+      "total": 200.00
+    },
+    {
+      "id": 5,
+      "cliente": "Laura López",
+      "estado": "entregada",
+      "total": 90.75
+    },
+    {
+      "id": 6,
+      "cliente": "David Sánchez",
+      "estado": "pendiente",
+      "total": 35.00
+    },
+    {
+      "id": 7,
+      "cliente": "Carmen Gómez",
+      "estado": "en proceso",
+      "total": 150.20
+    },
+    {
+      "id": 8,
+      "cliente": "Javier González",
+      "estado": "entregada",
+      "total": 180.45
+    },
+    {
+      "id": 9,
+      "cliente": "Marta Díaz",
+      "estado": "pendiente",
+      "total": 60.30
+    },
+    {
+      "id": 10,
+      "cliente": "Antonio Ruiz",
+      "estado": "en proceso",
+      "total": 95.60
+    }
+  ]
+  
