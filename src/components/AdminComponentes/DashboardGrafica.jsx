@@ -8,7 +8,7 @@ export default function DashboardGrafica() {
                     <h5 className="card-title">Gráfico</h5>
                     <hr />
                     <div >
-                        <img src='src/assets/grafica.png' style={{height:400}}/>
+                        <img src="https://raw.githubusercontent.com/marrrx/Imagenes/main/images/grafica.png"  style={{height:400}}/>
                     </div>
                 </div>
             </div>
