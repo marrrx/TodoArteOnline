@@ -35,7 +35,7 @@ export default function Navbar() {
                                 </li>
                                 <li className="nav-item">
                                     <Link to={'carrito'}>
-                                        <a className="nav-link active" aria-current="page" >Productos</a>
+                                        <a className="nav-link active" aria-current="page" >Carrito</a>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
