@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Acceso from '../views/Acceso';
+
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -39,7 +41,12 @@ export default function Navbar() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link disabled" >Usuario</a>
+                                    <a className="nav-link disabled" aria-current="page" >Usuario</a>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to={'acceso'}>
+                                    <a className="nav-link active" aria-current="page" >Iniciar sesion</a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

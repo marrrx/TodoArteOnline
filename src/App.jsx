@@ -6,6 +6,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Perfil from './views/Perfil';
 import Home from './views/Home';
 import Inicio from './views/Inicio';
+import Acceso from './views/Acceso';
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
         <Route path='/perfil' element={<Perfil />} />
         <Route path='/admin' element={"<LoginAdmin />"} />
         <Route path='/dashboard' element={"<LoginAdmin />"} />
+        
+        <Route path='/acceso' element={<Acceso/>}/>
         
       </Routes>
     </HashRouter>
