@@ -1,21 +1,11 @@
 import React from 'react'
-import Carousel from '../components/Carousel'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import { Outlet } from 'react-router-dom'
-
-
+import { BrowserRouter} from 'react-router-dom'
+import App from '../App'
 
 export default function Home() {
     return (
-        <>
-
-            <Navbar />
-
-            <Outlet />
-
-            <Footer />
-
-        </>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     )
 }

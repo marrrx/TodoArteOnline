@@ -1,14 +1,18 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import Acceso from '../views/Acceso';
-
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleHome = () => {
-        navigate('/')
-    }
+        navigate('/');
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <>
             <nav className="navbar" style={{ backgroundColor: 'black', height: 150 }} data-bs-theme='dark'>
@@ -24,36 +28,47 @@ export default function Navbar() {
                             </form>
                         </div>
                         <div className='col-3 align-content-center'>
-                            <ul className="nav text">
-                                <li className="nav-item">
-                                    <Link to={'productos'}>
-                                        <a className="nav-link active" aria-current="page" >Productos</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'favoritos'}>
-                                        <a className="nav-link active" aria-current="page" >Favoritos</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'carrito'}>
-                                        <a className="nav-link active" aria-current="page" >Carrito</a>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link disabled" aria-current="page" >Usuario</a>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to={'acceso'}>
-                                    <a className="nav-link active" aria-current="page" >Iniciar sesion</a>
-                                    </Link>
-                                </li>
-                            </ul>
+                            <div className={`navbar-toggler ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-            </nav >
+                {menuOpen && (
+                    <div className="menu-right">
+                        <ul className="nav text">
+                            <li className="nav-item">
+                                <Link to={'productos'}>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Productos</a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to={'favoritos'}>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Favoritos</a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to={'carrito'}>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Carrito</a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to={'acceso'}>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Iniciar sesión</a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to={'signin'}>
+                                        <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Registrarse</a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+            </nav>
         </>
-    )
+    );
 }
