@@ -6,6 +6,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Perfil from './views/Perfil';
 import Home from './views/Home';
 import Inicio from './views/Inicio';
+import DetallesProducto from './components/DetallesProducto';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}>
           <Route path='' element={<Inicio />} />
-          <Route path='productos' element={"<Productos />"} />
+          <Route path='/detalles-producto' element={<DetallesProducto />} />
           <Route path='favoritos' element={"<Favoritos />"} />
           <Route path='carrito' element={"<Carrito />"} />
         </Route>

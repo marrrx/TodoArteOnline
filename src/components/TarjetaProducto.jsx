@@ -1,9 +1,13 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 
 function TarjetaProducto(props) {
   return (
     <div style={{ width: '18rem', border: '1px solid #ccc', borderRadius: '0.25rem', margin: '1rem', padding: '0.5rem' }}>
+      <Link to="/detalles-producto">
       <img style={{ height: '300px', width: '100%', objectFit: 'cover' }} src={props.img} alt='' />
+      </Link>
       <div style={{ padding: '1rem' }}>
         <h5 style={{ margin: '0', marginBottom: '0.5rem' }}>{props.name}</h5>
         <p style={{ margin: '0', marginBottom: '0.5rem' }}>{props.description}</p>
