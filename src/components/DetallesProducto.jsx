@@ -1,9 +1,17 @@
 import React from 'react';
 import productos from '../data/productos.json'; // Importa el JSON de productos
+import { useParams } from 'react-router-dom';
+
 
 function DetallesProducto() {
-  // Obtén el primer producto del arreglo
-  const producto = productos[0];
+
+  const { id } = useParams();  
+  console.log('ID:', id);
+  const producto = productos.find(producto => producto.id === parseInt(id));  
+  console.log('Producto:', producto);
+  if (!producto) {
+    return <div>Producto no encontrado</div>;
+  }
 
   return (
     <div style={{ maxWidth: '80%', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)', display: 'flex', alignItems: 'center' }}>

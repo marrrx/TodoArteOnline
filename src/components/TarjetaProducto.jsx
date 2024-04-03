@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 function TarjetaProducto(props) {
   return (
     <div style={{ width: '18rem', border: '1px solid #ccc', borderRadius: '0.25rem', margin: '1rem', padding: '0.5rem' }}>
-      <Link to="/detalles-producto">
+      <Link to={`/detalles-producto/${props.ids}`}>
       <img style={{ height: '300px', width: '100%', objectFit: 'cover' }} src={props.img} alt='' />
       </Link>
       <div style={{ padding: '1rem' }}>

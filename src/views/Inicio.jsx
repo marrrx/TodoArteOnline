@@ -23,6 +23,7 @@ export default function Inicio() {
                 {productos.map(producto => (
                     <TarjetaProducto
                         key={producto.id}
+                        ids={producto.id}
                         name={producto.nombre}
                         description={producto.descripcionCorta}
                         price={producto.precio}
