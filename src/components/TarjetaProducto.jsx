@@ -11,7 +11,7 @@ function TarjetaProducto(props) {
       <div style={{ padding: '1rem' }}>
         <h5 style={{ margin: '0', marginBottom: '0.5rem' }}>{props.name}</h5>
         <p style={{ margin: '0', marginBottom: '0.5rem' }}>{props.description}</p>
-        <p style={{ margin: '0', marginBottom: '0.5rem' }}>${props.price}</p>
+        <p style={{ margin: '0', marginBottom: '0.5rem' }}>{props.price}</p>
         <Link to="/detalles-producto">
         <button style={{ padding: '0.5rem 1rem', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '0.25rem' }}>Comprar</button>
         </Link>
