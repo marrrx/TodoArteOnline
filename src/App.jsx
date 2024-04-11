@@ -7,11 +7,13 @@ import Perfil from './views/Perfil';
 import Home from './views/Home';
 import Inicio from './views/Inicio';
 import DetallesProducto from './components/DetallesProducto';
+import Cookies from './components/Cookies';
 
 function App() {
 
   return (  
     <HashRouter>
+      <Cookies/>
       <Routes>
         <Route path='/' element={<Home />}>
           <Route path='' element={<Inicio />} />
