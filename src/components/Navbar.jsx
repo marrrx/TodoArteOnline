@@ -20,7 +20,7 @@ export default function Navbar() {
                     <div className="row w-100">
                         <div className='col-6'>
 
-                            <a className="navbar-brand" onClick={handleHome}><img src="https://raw.githubusercontent.com/marrrx/Imagenes/main/logo.png" style={{ width: 100, height: 100 }} /></a>
+                            <a className="navbar-brand" onClick={handleHome} title='Enlace a la landing page'><img src="https://raw.githubusercontent.com/marrrx/Imagenes/main/logo.png" alt='Imagen que nos muestra el logo de la tienda' title='Logo de la tienda' style={{ width: 100, height: 100 }} /></a>
                         </div>
 
                         <div className='col-6 text-end'>
@@ -41,28 +41,28 @@ export default function Navbar() {
                     {menuOpen && (
                         <ul className="nav flex-column text text-end">
                             <li className="nav-item">
-                                <Link to={'productos'}>
-                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Productos</a>
+                                <Link to={'productos'} title='Enlace a Productos'>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu} title='Enlace a productos'>Productos</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={'favoritos'}>
-                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Favoritos</a>
+                                <Link to={'favoritos'} title='Enlace a Favoritos'>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu} title='Enlace a Favoritos'>Favoritos</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={'carrito'}>
-                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Carrito</a>
+                                <Link to={'carrito'} title='Enlace a Carrito'>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu} title='Enlace a Carrito'>Carrito</a>
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" title='Enlace a Inicio de Sesión'>
                                 <Link to={'acceso'}>
-                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Iniciar sesión</a>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu} title='Enlace a Inicio de Sesión'>Iniciar sesión</a>
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" title='Enlace a Registro'>
                                 <Link to={'signin'}>
-                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu}>Registrarse</a>
+                                    <a className="nav-link active" aria-current="page" onClick={toggleMenu} title='Enlace a Registro'>Registrarse</a>
                                 </Link>
                             </li>
                         </ul>

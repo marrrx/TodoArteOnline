@@ -25,6 +25,7 @@ export default function Inicio() {
                         key={producto.id}
                         ids={producto.id}
                         name={producto.nombre}
+                        author={producto.autor}
                         description={producto.descripcionCorta}
                         price={producto.precio}
                         img={producto.imagen}

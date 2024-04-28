@@ -21,7 +21,7 @@ export default function Carousel() {
                     <div className="carousel-inner" >
                         {productos.map((producto, index) => (
                             <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={producto.id} style={{ width: '100%',height:500 }}>
-                                <img src={producto.imagen} className="d-block w-100" alt={`Slide ${index + 1}`} style={{ objectFit:'cover', height: '100%' }} />
+                                <img src={producto.imagen} className="d-block w-100" alt={`Slide ${index + 1}`} title={producto.nombre} style={{ objectFit:'cover', height: '100%' }} />
                             </div>
                         ))}
                     </div>
