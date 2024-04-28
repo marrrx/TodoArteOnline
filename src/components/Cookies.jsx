@@ -41,10 +41,10 @@ const Cookies = () => {
             <div className="modal-body">
               <p>Este aviso de privacidad describe cómo TodoArte recopila, utiliza y protege la información personal que pueda recopilar a través de este sitio web.</p>
               <p>Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Te recomendamos que revises periódicamente esta página para asegurarte de estar familiarizado con cualquier cambio.</p>
-              <p>Si tienes alguna pregunta sobre esta política de privacidad, contáctanos a <a href="mailto:todoarte@gmail.com">todoarte@gmail.com</a>.</p>
+              <p>Si tienes alguna pregunta sobre esta política de privacidad, contáctanos a <a href="mailto:todoarte@gmail.com" title='Enviar Correo'>todoarte@gmail.com</a>.</p>
             </div>
             <div className="modal-footer">
-              <a href="https://policies.google.com/privacy?hl=es-419" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+              <a href="https://policies.google.com/privacy?hl=es-419" title='Mas información' target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
                 Más información
               </a>
               <button type="button" className="btn btn-primary" onClick={handleCloseModal}>Aceptar</button>
