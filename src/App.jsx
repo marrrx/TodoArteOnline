@@ -8,27 +8,31 @@ import Home from './views/Home';
 import Inicio from './views/Inicio';
 import DetallesProducto from './components/DetallesProducto';
 import Cookies from './components/Cookies';
+import { MyContextProvider } from './Context';
+import Carrito from './components/Carrito';
 
 function App() {
 
-  return (  
+  return (
     <HashRouter>
-      <Cookies/>
-      <Routes>
-        <Route path='/' element={<Home />}>
-          <Route path='' element={<Inicio />} />
-          <Route path='/detalles-producto/:id' element={<DetallesProducto />} />
-          <Route path='favoritos' element={"<Favoritos />"} />
-          <Route path='carrito' element={"<Carrito />"} />
-        </Route>
+      <MyContextProvider>
+        <Cookies />
+        <Routes>
+          <Route path='/' element={<Home />}>
+            <Route path='' element={<Inicio />} />
+            <Route path='/detalles-producto/:id' element={<DetallesProducto />} />
+            <Route path='favoritos' element={"<Favoritos />"} />
+            <Route path='/carrito' element={<Carrito/>} />
+          </Route>
 
-        <Route path='/logearse' element={''} />
-        <Route path='/registrarse' element={''} />
-        <Route path='/perfil' element={<Perfil />} />
-        <Route path='/admin' element={"<LoginAdmin />"} />
-        <Route path='/dashboard' element={"<LoginAdmin />"} />
-        
-      </Routes>
+          <Route path='/logearse' element={''} />
+          <Route path='/registrarse' element={''} />
+          <Route path='/perfil' element={<Perfil />} />
+          <Route path='/admin' element={"<LoginAdmin />"} />
+          <Route path='/dashboard' element={"<LoginAdmin />"} />
+
+        </Routes>
+      </MyContextProvider>
     </HashRouter>
 
   )
