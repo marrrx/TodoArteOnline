@@ -23,12 +23,7 @@ export default function Inicio() {
                 {productos.map(producto => (
                     <TarjetaProducto
                         key={producto.id}
-                        ids={producto.id}
-                        name={producto.nombre}
-                        author={producto.autor}
-                        description={producto.descripcionCorta}
-                        price={producto.precio}
-                        img={producto.imagen}
+                        producto={producto}
                     />
                 ))}
             </div>
