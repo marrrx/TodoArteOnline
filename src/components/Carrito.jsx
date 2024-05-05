@@ -7,19 +7,20 @@ import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 
 
 const Carrito = () => {
-    const { productos } = useContext(MyContext);
+    const { productos, total } = useContext(MyContext);
 
     const onCreateOrder = (data, actions) => {
         return actions.order.create({
             purchase_units: [
                 {
                     amount: {
-                        value: "8.99",
+                        value: total.toString(),
                     },
                 },
             ],
         });
     }
+    
 
     const onApproveOrder = (data, actions) => {
         return actions.order.capture().then((details) => {
@@ -34,7 +35,10 @@ const Carrito = () => {
                 {productos.map((producto) => (<CardProductoCarrito key={producto.id}
                     producto={producto} />))}
 
-                    
+                <hr />
+
+                <div className="m-3 "><h4>Total: ${total}</h4></div>
+
                 <PayPalButtons
                     style={{ layout: "vertical" }}
                     createOrder={(data, actions) => onCreateOrder(data, actions)}
