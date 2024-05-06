@@ -21,7 +21,7 @@ function TarjetaProducto({producto}) {
         <h1 style={{ margin: '0', marginBottom: '0.5rem', fontSize: '1.5rem'}}>{producto.nombre}</h1>
         <h2 style={{ margin: '0', marginBottom: '0.5rem', fontSize: '1rem' }}>{producto.autor}</h2>
         <p style={{ margin: '0', marginBottom: '0.5rem' }}>{producto.descripcion}</p>
-        <p style={{ margin: '0', marginBottom: '0.5rem' }}>{producto.precio}</p>
+        <p style={{ margin: '0', marginBottom: '0.5rem' }}>${producto.precio}</p>
         <button style={{ padding: '0.5rem 1rem', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '0.25rem' }}>Comprar</button>
         <button className="mt-2" onClick={agregarCarrito} style={{ padding: '0.5rem 1rem', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '0.25rem' }}>Agregar al Carrito</button>
       </div>

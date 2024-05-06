@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Terraza de café por la noche",
-    "precio": "$2,497.50",
+    "precio": "2497.00",
     "autor": "Vincent van Gogh",
     "categoría": "Impresionismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/1.jpeg",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "nombre": "Casas de Campesinos",
-    "precio": "$2,497.50",
+    "precio": "2497.00",
     "autor": "Camille Pissarro",
     "categoría": "Impresionismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/2.jpeg",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "nombre": "El jardín del artista en Giverny",
-    "precio": "$2,497.50",
+    "precio": "2497.00",
     "autor": "Claude Monet",
     "categoría": "Impresionismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/3.jpeg",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "nombre": "El Beso",
-    "precio": "$2,497.50",
+    "precio": "2497.00",
     "autor": "Gustav Klimt",
     "categoría": "Modernismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/4.jpeg",
@@ -42,7 +42,7 @@
   {
     "id": 5,
     "nombre": "Casa en Atersee",
-    "precio": "$2,497.50",
+    "precio": "2497.00",
     "autor": "Gustav Klimt",
     "categoría": "Modernismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/5.jpeg",
@@ -52,7 +52,7 @@
   {
     "id": 6,
     "nombre": "Las meninas",
-    "precio": "$16,557.50",
+    "precio": "16557.00",
     "autor": "Gustav Klimt",
     "categoría": "Modernismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/6.jpeg",
@@ -62,7 +62,7 @@
   {
     "id": 7,
     "nombre": "La gran ola de Kanagawa",
-    "precio": "$2,571.50",
+    "precio": "2571.00",
     "autor": "Katsushika Hokusai",
     "categoría": "Edo o Tokugawa",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/7.jpeg",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "nombre": "Noirmoutier",
-    "precio": "$4,162.50",
+    "precio": "4162.00",
     "autor": "Pierre-Auguste Renoir",
     "categoría": "Impresionismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/8.jpeg",
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "nombre": "Fruta y jarra en una mesa",
-    "precio": "$2,497.50",
+    "precio": "2497.00",
     "autor": "Paul Cézanne",
     "categoría": "Impresionismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/9.jpeg",
@@ -92,7 +92,7 @@
   {
     "id": 10,
     "nombre": "Naturaleza muerta y bouquet",
-    "precio": "$4,162.50",
+    "precio": "4162.00",
     "autor": "Pierre-Auguste Renoir",
     "categoría": "Impresionismo",
     "imagen": "https://raw.githubusercontent.com/marrrx/Imagenes/main/images/10.jpeg",

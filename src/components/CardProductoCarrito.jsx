@@ -10,7 +10,7 @@ function CardProductoCarrito(props) {
                 <h5>{props.producto.nombre}</h5>
             </div>
             <div class="p-2">
-            <h5>{props.producto.precio}</h5>
+            <h5>${props.producto.precio}</h5>
             </div>
          
             

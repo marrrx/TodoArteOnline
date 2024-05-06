@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { MyContext } from "../Context";
 import CardProductoCarrito from "./CardProductoCarrito";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import { MyContext } from "../Context";
 
 
 
@@ -9,31 +9,26 @@ import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 const Carrito = () => {
     const { productos, total } = useContext(MyContext);
 
-    const onCreateOrder = (data, actions) => {
+    const createOrder = (data, actions) => {
         return actions.order.create({
             purchase_units: [
                 {
                     amount: {
-                        value: total.toString(),
+                        value:`${total}`,
                     },
                 },
             ],
         });
-    }
-    
+    };
 
     const onApproveOrder = (data, actions) => {
-        return actions.order.capture().then((details) => {
-            const name = details.payer.name.given_name;
-            alert(`Transaction completed by ${name}`);
-        });
-    }
+        return actions.order.capture();
+    };
 
     return (
         <>
             <div className="container" style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                {productos.map((producto) => (<CardProductoCarrito key={producto.id}
-                    producto={producto} />))}
+                {productos.map((producto) => (<CardProductoCarrito key={producto.id} producto={producto} />))}
 
                 <hr />
 
@@ -41,13 +36,13 @@ const Carrito = () => {
 
                 <PayPalButtons
                     style={{ layout: "vertical" }}
-                    createOrder={(data, actions) => onCreateOrder(data, actions)}
+                    createOrder={(data, actions) => createOrder(data, actions)}
                     onApprove={(data, actions) => onApproveOrder(data, actions)}
-                />
+                    forceReRender={[total]}
+                />›
 
             </div>
-
         </>
     )
 }
-export default Carrito;
+export default Carrito

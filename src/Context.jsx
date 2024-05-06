@@ -8,15 +8,19 @@ const MyContextProvider = ({ children }) => {
 
   useEffect(() => {
     const totalPrecio = productos.reduce((acc, curr) => {
-      const precioNumerico = parseFloat(curr.precio.replace(/[^\d.]/g, ''));
+      const precioNumerico = parseFloat(curr.precio);
       return acc + precioNumerico;
     }, 0);
-
+  
     const totalFormateado = totalPrecio.toFixed(2);
+  
     setTotal(totalFormateado);
-    console.log(totalFormateado)
   }, [productos]);
-
+  
+  
+  
+  
+  
 
 
   const setProductoGlobal = (value) => {
@@ -24,7 +28,7 @@ const MyContextProvider = ({ children }) => {
   };
 
   return (
-    <MyContext.Provider value={{ productos, total, setProductoGlobal }}>
+    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal }}>
       {children}
     </MyContext.Provider>
   );
