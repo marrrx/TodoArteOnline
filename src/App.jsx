@@ -11,6 +11,7 @@ import Cookies from './components/Cookies';
 import { MyContextProvider } from './Context';
 import Carrito from './components/Carrito';
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import Productos from './views/Productos';
 import Comunicate from './views/Comunicate';
 
 
@@ -33,12 +34,14 @@ function App() {
               <Route path='/detalles-producto/:id' element={<DetallesProducto />} />
               <Route path='favoritos' element={"<Favoritos />"} />
               <Route path='/carrito' element={<Carrito />} />
+              <Route path='/perfil' element={<Perfil />} />
+              <Route path='/productos' element={<Productos />} />
               <Route path='/comunicate' element={<Comunicate/>} />
+
             </Route>
 
             <Route path='/logearse' element={''} />
             <Route path='/registrarse' element={''} />
-            <Route path='/perfil' element={<Perfil />} />
             <Route path='/admin' element={"<LoginAdmin />"} />
             <Route path='/dashboard' element={"<LoginAdmin />"} />
 

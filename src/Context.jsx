@@ -4,6 +4,8 @@ const MyContext = createContext();
 
 const MyContextProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
+  const [productosDeseos, setProductosDeseos] = useState([]);
+
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -11,24 +13,29 @@ const MyContextProvider = ({ children }) => {
       const precioNumerico = parseFloat(curr.precio);
       return acc + precioNumerico;
     }, 0);
-  
+
     const totalFormateado = totalPrecio.toFixed(2);
-  
+
     setTotal(totalFormateado);
   }, [productos]);
-  
-  
-  
-  
-  
+
+
+
+
+
 
 
   const setProductoGlobal = (value) => {
     setProductos([...productos, value]);
   };
+  const setProductoDeseosGlobal = (value) => {
+    setProductosDeseos([...productosDeseos, value]);
+  };
+
+
 
   return (
-    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal }}>
+    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos,setProductoDeseosGlobal }}>
       {children}
     </MyContext.Provider>
   );

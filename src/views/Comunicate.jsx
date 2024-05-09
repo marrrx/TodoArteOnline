@@ -1,16 +1,22 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from 'react-router-dom';
-import { Outlet } from 'react-router-dom'
+
+import { useNavigate } from 'react-router-dom'
+
+
 
 export default function Comunicate() {
+const navigate = useNavigate();
 
-    return (
-        <>
-         <div className="container mt-5">
+const handleHome = () => {
+  navigate('/');
+};
+
+  return (
+    <>
+      <div className="container m-5">
         <div className="border rounded p-4">
           <h2 className="mb-4">Envíe su mensaje</h2>
-          <form action="https://formsubmit.co/todoarteeee@gmail.com" method="POST">
+          <form>
             <div className="form-group">
               <label htmlFor="nombre">Nombre</label>
               <input type="text" className="form-control" name="name" id="nombre" required />
@@ -28,16 +34,12 @@ export default function Comunicate() {
               <textarea className="form-control" name="comments" id="comentarios" cols="15" rows="5" required></textarea>
             </div>
             <div>
-            <label>Una vez enviado tu mensaje, te redirigiramos a la página de incio</label>
+              <label>Una vez enviado tu mensaje, te redirigiramos a la página de incio</label>
             </div>
-            <button type="submit" className="btn btn-primary">Enviar</button>
-            
-
-            <input type="hidden" name="_next" value='http://localhost:5173/TodoArteOnline/'/>
-            <input type="hidden" name="_captcha" value="false"/>
+            <button onClick={handleHome} className="btn btn-primary">Enviar</button>
           </form>
         </div>
       </div>
-        </>
-    )
+    </>
+  )
 }

@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Modal } from 'bootstrap'; 
 
 const Cookies = () => {
-    const [modalInstance, setModalInstance] = useState(null);
-    const modalRef = useRef(null);
+    const [modalInstance, setModalInstance] = useState();
+    const modalRef = useRef();
 
     useEffect(() => {
         const modalElement = modalRef.current;

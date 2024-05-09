@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Carousel from '../components/Carousel'
 import TarjetaProducto from '../components/TarjetaProducto'
-export default function Inicio() {
+
+
+export default function Productos() {
 
     const [productos, setProductos] = useState([]);
 
@@ -17,11 +18,10 @@ export default function Inicio() {
 
     return (
         <>
-            <Carousel />
             <div className='container'>
-                <h2 className='mt-4'>Novedades</h2>
+                <h2 className='mt-4'>Todos los productos</h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
-                    {productos.slice(0, 4).map(producto => (
+                    {productos.map(producto => (
                         <TarjetaProducto
                             key={producto.id}
                             producto={producto}

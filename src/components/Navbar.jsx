@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Carrito from './Carrito';
+import ListaDeseos from './ListaDeseos';
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -32,7 +33,17 @@ export default function Navbar() {
                         </div>
                         <div className='col-1 d-flex justify-content-between align-items-center ms-5  '>
                             <div class="dropdown">
-                                <button class="btn btn-secondary navbar-toggler" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-secondary navbar-toggler me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                    </svg>
+                                </button>
+                                <div className="dropdown-menu dropdown-menu-end" style={{ width: 600 }}>
+                                    <ListaDeseos />
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary navbar-toggler me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                                     </svg>
@@ -78,19 +89,20 @@ export default function Navbar() {
                         {menuOpen && (
                             <ul className="nav flex-column text text-end" style={{ padding: '10px', margin: 0 }}>
                                 <li className="nav-item" style={{ marginBottom: '10px' }}>
+                                    <Link to={'perfil'} title='Enlace a Perfil'>
+                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a perfil' style={{ color: 'white' }}>
+                                            <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Perfil
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li className="nav-item" style={{ marginBottom: '10px' }}>
                                     <Link to={'productos'} title='Enlace a Productos'>
                                         <a className="nav-link active" onClick={toggleMenu} title='Enlace a productos' style={{ color: 'white' }}>
                                             <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Productos
                                         </a>
                                     </Link>
                                 </li>
-                                <li className="nav-item" style={{ marginBottom: '10px' }}>
-                                    <Link to={'favoritos'} title='Enlace a Favoritos'>
-                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a Favoritos' style={{ color: 'white' }}>
-                                            <i className="fas fa-heart" style={{ marginRight: '5px' }}></i> Favoritos
-                                        </a>
-                                    </Link>
-                                </li>
+                             
                                 <li className="nav-item" style={{ marginBottom: '10px' }} title='Enlace a Inicio de Sesión'>
                                     <Link to={'acceso'}>
                                         <a className="nav-link active" onClick={toggleMenu} title='Enlace a Inicio de Sesión' style={{ color: 'white' }}>

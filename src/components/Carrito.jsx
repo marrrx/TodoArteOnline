@@ -27,7 +27,9 @@ const Carrito = () => {
 
     return (
         <>
-            <div className="container" style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <div className="container p-3" style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+            <h2>Carrito</h2>
+                <hr/>
                 {productos.map((producto) => (<CardProductoCarrito key={producto.id} producto={producto} />))}
 
                 <hr />
@@ -39,7 +41,7 @@ const Carrito = () => {
                     createOrder={(data, actions) => createOrder(data, actions)}
                     onApprove={(data, actions) => onApproveOrder(data, actions)}
                     forceReRender={[total]}
-                />›
+                />
 
             </div>
         </>

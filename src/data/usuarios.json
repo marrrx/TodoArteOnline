@@ -4,7 +4,9 @@
       "nombre": "Juan Pérez",
       "email": "juan@example.com",
       "telefono": "123456789",
-      "direccion": "Calle Principal 123"
+      "direccion": "Calle Principal 123",
+      "contraseña":"juanito123"
+
     },
     {
       "id": 2,
