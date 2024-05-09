@@ -22,7 +22,9 @@ export default function Footer() {
             <div className="col-sm">
               <h5>Contactos</h5>
               <ul className='list-unstyled'>
-              <li><a href='#' title='Comunicate con nosotros'>Comunícate con nosotros</a></li>
+              <Link to={`/comunicate`} title='Enlace a comunicación'>
+              <li><p>Comunicate con nosotros</p></li>
+              </Link>
                 <li>info@aguascalientes.tecnm.mxddd</li>
                 <li>+52 465 113 4563</li>
                 <li>610 Dionsio Mtz. Trejo, Aguascalientes, México.</li>
