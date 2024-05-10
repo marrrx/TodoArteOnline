@@ -15,6 +15,9 @@ export default function Footer() {
                 <li><a href='' title='Terminos y condiciones'>Términos y condiciones</a></li>
                 <li><a href='' title='Politica de privacidad'>Politica de privacidad</a></li>
                 <li><a href='' title='Acerca de nosotros'>Acerca de nosotros</a></li>
+                <Link to={`/preguntas`} title='Enlace a preguntas frecuentes'>
+              <li><p>Preguntas frecuentes</p></li>
+              </Link>
               </ul>
             </div>
 

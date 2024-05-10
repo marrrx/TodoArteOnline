@@ -13,6 +13,7 @@ import Carrito from './components/Carrito';
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Productos from './views/Productos';
 import Comunicate from './views/Comunicate';
+import Preguntas from './views/Preguntas';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path='/perfil' element={<Perfil />} />
               <Route path='/productos' element={<Productos />} />
               <Route path='/comunicate' element={<Comunicate/>} />
+              <Route path='/preguntas' element={<Preguntas/>}  />
 
             </Route>
 
