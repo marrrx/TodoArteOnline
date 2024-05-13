@@ -19,8 +19,8 @@ export default function Acceso() {
         }
 
         // Busca el usuario en el archivo JSON según el tipo de usuario y la contraseña
-        const usuarioEncontrado = tipoUsuario === 'usuario' ?
-            usuarios.find(usuario => usuario.email === email && usuario.password === password) :
+        const usuarioEncontrado = tipoUsuario == 'usuario' ?
+            usuarios.find(usuario => usuario.email == email && usuario.password == password) :
             null; // Si es administrador, la búsqueda se hace de manera diferente
 
         if (!usuarioEncontrado) {

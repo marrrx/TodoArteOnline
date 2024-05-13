@@ -112,13 +112,7 @@ export default function Navbar() {
                                         </a>
                                     </Link>
                                 </li>
-                                <li className="nav-item" style={{ marginBottom: '10px' }} title='Enlace a Registro'>
-                                    <Link to={'signin'}>
-                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a Registro' style={{ color: 'white' }}>
-                                            <i className="fas fa-user-plus" style={{ marginRight: '5px' }}></i> Registrarse
-                                        </a>
-                                    </Link>
-                                </li>
+                                
                             </ul>
                         )}
                     </div>
