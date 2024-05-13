@@ -102,11 +102,17 @@ export default function Navbar() {
                                         </a>
                                     </Link>
                                 </li>
-                             
-                                <li className="nav-item" style={{ marginBottom: '10px' }} title='Enlace a Inicio de Sesión'>
-                                    <Link to={'acceso'}>
-                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a Inicio de Sesión' style={{ color: 'white' }}>
-                                            <i className="fas fa-sign-in-alt" style={{ marginRight: '5px' }}></i> Iniciar sesión
+                                <li className="nav-item" style={{ marginBottom: '10px' }}>
+                                    <Link to={'login'} title='Enlace a Login'>
+                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a login' style={{ color: 'white' }}>
+                                            <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Inicia sesión
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li className="nav-item" style={{ marginBottom: '10px' }}>
+                                    <Link to={'registro'} title='Enlace a Registro'>
+                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a registro' style={{ color: 'white' }}>
+                                            <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Registrate
                                         </a>
                                     </Link>
                                 </li>

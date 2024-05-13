@@ -14,6 +14,8 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Productos from './views/Productos';
 import Comunicate from './views/Comunicate';
 import Preguntas from './views/Preguntas';
+import Acceso from './views/Acceso';
+import Registro from './views/Registro';
 
 
 function App() {
@@ -42,7 +44,8 @@ function App() {
 
             </Route>
 
-            <Route path='/logearse' element={''} />
+            <Route path='/login' element={<Acceso/>} />
+            <Route path='/registro' element={<Registro/>} />
             <Route path='/registrarse' element={''} />
             <Route path='/admin' element={"<LoginAdmin />"} />
             <Route path='/dashboard' element={"<LoginAdmin />"} />
