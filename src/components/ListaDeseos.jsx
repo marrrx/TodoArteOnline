@@ -6,16 +6,13 @@ import CardProductoDeseos from "./CardProductoDeseos";
 
 
 const ListaDeseos = () => {
-
     const { productosDeseos } = useContext(MyContext);
-
-console.log(productosDeseos)
 
     return (
         <>
             <div className="container p-3 " style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
                 <h2>Lista de deseos</h2>
-                <hr/>
+                <hr />
                 {productosDeseos.map((producto) => (<CardProductoDeseos key={producto.id} producto={producto} />))}
             </div>
         </>

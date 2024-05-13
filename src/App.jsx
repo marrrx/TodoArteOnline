@@ -41,11 +41,10 @@ function App() {
               <Route path='/productos' element={<Productos />} />
               <Route path='/comunicate' element={<Comunicate/>} />
               <Route path='/preguntas' element={<Preguntas/>}  />
+              <Route path='/login' element={<Acceso/>} />
+              <Route path='/registro' element={<Registro/>} />
 
             </Route>
-
-            <Route path='/login' element={<Acceso/>} />
-            <Route path='/registro' element={<Registro/>} />
             <Route path='/registrarse' element={''} />
             <Route path='/admin' element={"<LoginAdmin />"} />
             <Route path='/dashboard' element={"<LoginAdmin />"} />

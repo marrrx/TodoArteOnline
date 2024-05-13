@@ -32,19 +32,19 @@ export default function Navbar() {
                             </form>
                         </div>
                         <div className='col-1 d-flex justify-content-between align-items-center ms-5  '>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary navbar-toggler me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                            <div className="dropdown">
+                                <button className="btn btn-secondary navbar-toggler me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                                     </svg>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-end" style={{ width: 600 }}>
                                     <ListaDeseos />
                                 </div>
                             </div>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary navbar-toggler me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <div className="dropdown">
+                                <button className="btn btn-secondary navbar-toggler me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                                     </svg>
                                 </button>
@@ -56,12 +56,8 @@ export default function Navbar() {
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                         </div>
-
-
                     </div>
                 </div>
-
-
 
                 <div style={{ position: 'relative' }}>
                     {menuOpen && (
@@ -79,8 +75,8 @@ export default function Navbar() {
                         style={{
                             backgroundColor: menuOpen ? 'black' : 'transparent',
                             width: '200px',
-                            height: '100vh',
-                            position: 'fixed',
+                            height: menuOpen ? '100vh' : 'auto', // Cambia la altura cuando esté abierto o cerrado
+                            position: menuOpen ? 'fixed' : 'static', // Ajusta el posicionamiento
                             right: 0,
                             top: 0,
                             zIndex: 3, // Asegúrate de que el menú tenga un índice de apilamiento más alto
@@ -112,7 +108,7 @@ export default function Navbar() {
                                 <li className="nav-item" style={{ marginBottom: '10px' }}>
                                     <Link to={'registro'} title='Enlace a Registro'>
                                         <a className="nav-link active" onClick={toggleMenu} title='Enlace a registro' style={{ color: 'white' }}>
-                                            <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Registrate
+                                            <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Regístrate
                                         </a>
                                     </Link>
                                 </li>
