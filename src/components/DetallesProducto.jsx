@@ -2,8 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import productos from '../data/productos.json'; // Importa el JSON de productos
 import { useParams } from 'react-router-dom';
-import Reseñas from './Reseñas';
 import { MyContext } from '../Context';
+import Reseñas from './Reseñas'
 
 function DetallesProducto() {
   const { setProductoGlobal } = useContext(MyContext);
@@ -34,7 +34,7 @@ function DetallesProducto() {
         </div>
       </div>
 
-      <Reseñas />
+      <Reseñas/>
 
     </>
   );

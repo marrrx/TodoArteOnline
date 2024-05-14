@@ -22,7 +22,7 @@ function App() {
 
   const initialOptions = {
     "client-id": "AWBf_rJXUjqxMy7fR6dJ8qUE2ssbx6SYS98-4CzdfkRu6W3af2MS0XWDQ49zEWJqsD10I81n5E2JWbEx",
-    currency: "USD",
+    currency: "MXN",
     intent: "capture",
   };
 
