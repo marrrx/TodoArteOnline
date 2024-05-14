@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-export default function LoginAdmin() {
-const navigate = useNavigate();
 
-    const handleSubmit = () => {
-      navigate('/')
+export default function LoginAdmin() {
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Lógica de inicio de sesión aquí
+        navigate('/');
+    };
+
+    const handleCancel = () => {
+        navigate('/');
     };
 
     return (
@@ -22,15 +29,17 @@ const navigate = useNavigate();
                                 <label htmlFor="password">Contraseña:</label>
                                 <input type="password" className="form-control" id="password" required />
                             </div>
-                            <br></br>
-                            <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+                            <br />
+                            <div className="d-flex justify-content-between">
+                                <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+                                <button type="button" className="btn btn-secondary" onClick={handleCancel}>Cancelar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <br></br>
+            <br />
         </div>
-
-        
     );
 }
+
