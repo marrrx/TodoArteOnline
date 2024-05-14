@@ -16,6 +16,9 @@ import Comunicate from './views/Comunicate';
 import Preguntas from './views/Preguntas';
 import Acceso from './views/Acceso';
 import Registro from './views/Registro';
+import AdminProductos from './views/AdminProductos';
+import Dashboard from './views/Dashboard';
+import LoginAdmin from './views/LoginAdmin';
 
 
 function App() {
@@ -46,8 +49,9 @@ function App() {
 
             </Route>
             <Route path='/registrarse' element={''} />
-            <Route path='/admin' element={"<LoginAdmin />"} />
-            <Route path='/dashboard' element={"<LoginAdmin />"} />
+            <Route path='/admin' element={<LoginAdmin />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/crud' element={<AdminProductos />} />
 
           </Routes>
         </MyContextProvider>
