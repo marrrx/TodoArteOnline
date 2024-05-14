@@ -112,14 +112,7 @@ export default function Navbar() {
                                         </a>
                                     </Link>
                                 </li>
-                                <li className="nav-item" style={{ marginBottom: '10px' }}>
-                                    <Link to={'loginadmin'} title='Enlace a inicio como administrador'>
-                                        <a className="nav-link active" onClick={toggleMenu} title='Enlace a inicio administrador' style={{ color: 'white' }}>
-                                            <i className="fas fa-box-open" style={{ marginRight: '5px' }}></i> Inicio como administrador
-                                        </a>
-                                    </Link>
-                                </li>
-                                
+                
                             </ul>
                         )}
                     </div>

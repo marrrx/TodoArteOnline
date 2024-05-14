@@ -19,6 +19,7 @@ import Registro from './views/Registro';
 import AdminProductos from './views/AdminProductos';
 import Dashboard from './views/Dashboard';
 import LoginAdmin from './views/LoginAdmin';
+import AdminCategorias from './views/AdminCategorias';
 
 
 function App() {

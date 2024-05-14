@@ -6,16 +6,11 @@ export default function LoginAdmin() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Lógica de inicio de sesión aquí
-        navigate('/');
-    };
-
-    const handleCancel = () => {
-        navigate('/');
+        navigate('/admin/dashboard');
     };
 
     return (
-        <div className="container mt-5">
+        <div className="container p-5 ">
             <div style={{ border: '1px solid #ddd', borderRadius: '8px', padding: '20px', backgroundColor: '#f9f9f9' }}>
                 <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Iniciar sesión como administrador</h2>
                 <div className="row">
@@ -32,7 +27,6 @@ export default function LoginAdmin() {
                             <br />
                             <div className="d-flex justify-content-between">
                                 <button type="submit" className="btn btn-primary">Iniciar sesión</button>
-                                <button type="button" className="btn btn-secondary" onClick={handleCancel}>Cancelar</button>
                             </div>
                         </form>
                     </div>

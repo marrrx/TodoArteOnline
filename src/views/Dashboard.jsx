@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div className="container">
+      <div className="container p-5">
         <AccessosRapidos />
 
 
