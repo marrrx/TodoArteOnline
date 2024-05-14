@@ -9,24 +9,29 @@ const navigate = useNavigate();
 
     return (
         <div className="container mt-5">
-            <h2>Iniciar sesión</h2>
-            <div className="row">
-                <div className="col-md-6 offset-md-3">
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="email">Correo electrónico:</label>
-                            <input type="email" className="form-control" id="email" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Contraseña:</label>
-                            <input type="password" className="form-control" id="password" required />
-                        </div>
-
-                        <button type="submit" className="btn btn-primary">Iniciar sesión</button>
-                    </form>
+            <div style={{ border: '1px solid #ddd', borderRadius: '8px', padding: '20px', backgroundColor: '#f9f9f9' }}>
+                <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Iniciar sesión</h2>
+                <div className="row">
+                    <div className="col-md-6 offset-md-3">
+                        <form onSubmit={handleSubmit}>
+                            <div className="form-group">
+                                <label htmlFor="email">Correo electrónico:</label>
+                                <input type="email" className="form-control" id="email" required />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="password">Contraseña:</label>
+                                <input type="password" className="form-control" id="password" required />
+                            </div>
+                            <br></br>
+                            <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+            <br></br>
         </div>
+
+        
     );
 }
 
