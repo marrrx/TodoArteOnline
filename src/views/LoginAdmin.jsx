@@ -5,7 +5,7 @@ export default function LoginAdmin() {
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
-        navigate('/dashboard')
+        navigate('/admin/dashboard')
       };
   return (
     <div>LoginAdmin

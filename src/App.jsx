@@ -19,6 +19,7 @@ import Registro from './views/Registro';
 import AdminProductos from './views/AdminProductos';
 import Dashboard from './views/Dashboard';
 import LoginAdmin from './views/LoginAdmin';
+import AdminCategorias from './views/AdminCategorias';
 
 
 function App() {
@@ -50,8 +51,10 @@ function App() {
             </Route>
             <Route path='/registrarse' element={''} />
             <Route path='/admin' element={<LoginAdmin />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/crud' element={<AdminProductos />} />
+            <Route path='/admin/dashboard' element={<Dashboard />} />
+            <Route path='/admin/crud/productos' element={<AdminProductos />} />
+            <Route path='/admin/crud/categorias' element={<AdminCategorias />} />
+
 
           </Routes>
         </MyContextProvider>

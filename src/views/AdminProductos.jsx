@@ -1,10 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Modal } from 'bootstrap';
+import { MyContext } from '../Context';
 
 export default function AdminProductos() {
+    const { categorias, setCategorias } = useContext(MyContext);
+
     const [productos, setProductos] = useState([]);
-    const [imagenes, setImagenes] = useState([]);
     const [modalInstance, setModalInstance] = useState(null);
     const modalRef = useRef();
     const [idProductos, setIdProductos] = useState(0);
@@ -102,7 +104,7 @@ export default function AdminProductos() {
             <div className='container justify-content-center p-xxl-5 '>
                 <div className='row'>
                     <div className='col'>
-                        <button onClick={() => navigate('/dashboard')}>
+                        <button onClick={() => navigate('/admin/dashboard')}>
                             Regresar
                         </button>
                     </div>
@@ -186,10 +188,9 @@ export default function AdminProductos() {
                                 <div className="form-group">
                                     <label htmlFor="categoriaProducto">Selecciona la categoría</label>
                                     <select className="form-control" id="categoriaProducto" defaultValue={currentProduct ? currentProduct.categoría : ''} required>
-                                        <option value="">Selecciona una categoría</option>
-                                        <option value="Impresionismo">Impresionismo</option>
-                                        <option value="Modernismo">Modernismo</option>
-                                        <option value="Edo o Tokugawa">Edo o Tokugawa</option>
+                                        {categorias.map((categoria) => (
+                                            <option value={categoria.nombre} key={categoria.id}>{categoria.nombre}</option>
+                                        ))}
                                     </select>
                                 </div>
                                 <br />

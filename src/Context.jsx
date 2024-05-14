@@ -5,6 +5,8 @@ const MyContext = createContext();
 const MyContextProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
   const [productosDeseos, setProductosDeseos] = useState([]);
+  const [categorias, setCategorias] = useState([]);
+
 
   const [total, setTotal] = useState(0);
 
@@ -35,7 +37,7 @@ const MyContextProvider = ({ children }) => {
 
 
   return (
-    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos,setProductoDeseosGlobal }}>
+    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos, setProductoDeseosGlobal, categorias, setCategorias }}>
       {children}
     </MyContext.Provider>
   );
