@@ -21,6 +21,7 @@ import Dashboard from './views/Dashboard';
 import LoginAdmin from './views/LoginAdmin';
 
 
+
 function App() {
 
   const initialOptions = {
@@ -48,8 +49,7 @@ function App() {
               <Route path='/registro' element={<Registro/>} />
 
             </Route>
-            <Route path='/registrarse' element={''} />
-            <Route path='/admin' element={<LoginAdmin />} />
+            <Route path='/loginadmin' element={<LoginAdmin />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/crud' element={<AdminProductos />} />
 
