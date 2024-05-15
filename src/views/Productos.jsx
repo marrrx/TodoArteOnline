@@ -4,8 +4,7 @@ import TarjetaProducto from '../components/TarjetaProducto';
 export default function Productos() {
     const [productos, setProductos] = useState([]);
     const [filtroNombre, setFiltroNombre] = useState('');
-    const [ordenPrecio, setOrdenPrecio] = useState('asc');
-    const [ordenAlfabetico, setOrdenAlfabetico] = useState('asc');
+    const [orden, setOrden] = useState({ type: 'precio', direction: 'asc' });
 
     useEffect(() => {
         import('../data/productos.json')
@@ -21,29 +20,30 @@ export default function Productos() {
         setFiltroNombre(nombre);
     };
 
-    const handleOrdenPrecioChange = e => {
-        setOrdenPrecio(e.target.value);
-    };
-
-    const handleOrdenAlfabeticoChange = e => {
-        setOrdenAlfabetico(e.target.value);
+    const handleOrdenChange = e => {
+        const value = e.target.value;
+        const [type, direction] = value.split('-');
+        setOrden({ type, direction });
     };
 
     const productosFiltrados = productos.filter(producto =>
         producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase())
     );
 
-    const productosOrdenadosPrecio = [...productosFiltrados].sort((a, b) => {
-        const precioA = parseFloat(a.precio);
-        const precioB = parseFloat(b.precio);
-        return ordenPrecio === 'asc' ? precioA - precioB : precioB - precioA;
-    });
+    const ordenarProductos = (a, b) => {
+        if (orden.type === 'precio') {
+            const precioA = parseFloat(a.precio);
+            const precioB = parseFloat(b.precio);
+            return orden.direction === 'asc' ? precioA - precioB : precioB - precioA;
+        } else if (orden.type === 'alfabetico') {
+            const nombreA = a.nombre.toLowerCase();
+            const nombreB = b.nombre.toLowerCase();
+            return orden.direction === 'asc' ? nombreA.localeCompare(nombreB) : nombreB.localeCompare(nombreA);
+        }
+        return 0;
+    };
 
-    const productosOrdenadosAlfabetico = [...productosFiltrados].sort((a, b) => {
-        const nombreA = a.nombre.toLowerCase();
-        const nombreB = b.nombre.toLowerCase();
-        return ordenAlfabetico === 'asc' ? nombreA.localeCompare(nombreB) : nombreB.localeCompare(nombreA);
-    });
+    const productosOrdenados = [...productosFiltrados].sort(ordenarProductos);
 
     return (
         <>
@@ -56,22 +56,15 @@ export default function Productos() {
                         value={filtroNombre}
                         onChange={e => filtrarPorNombre(e.target.value)}
                     />
-                    <select value={ordenPrecio} onChange={handleOrdenPrecioChange}>
-                        <option value='asc'>Precio ascendente</option>
-                        <option value='desc'>Precio descendente</option>
-                    </select>
-                    <select value={ordenAlfabetico} onChange={handleOrdenAlfabeticoChange}>
-                        <option value='asc'>Orden alfabético A-Z</option>
-                        <option value='desc'>Orden alfabético Z-A</option>
+                    <select value={`${orden.type}-${orden.direction}`} onChange={handleOrdenChange}>
+                        <option value='precio-asc'>Precio ascendente</option>
+                        <option value='precio-desc'>Precio descendente</option>
+                        <option value='alfabetico-asc'>Orden alfabético A-Z</option>
+                        <option value='alfabetico-desc'>Orden alfabético Z-A</option>
                     </select>
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
-                    {ordenPrecio === 'asc' ? productosOrdenadosPrecio.map(producto => (
-                        <TarjetaProducto
-                            key={producto.id}
-                            producto={producto}
-                        />
-                    )) : productosOrdenadosAlfabetico.map(producto => (
+                    {productosOrdenados.map(producto => (
                         <TarjetaProducto
                             key={producto.id}
                             producto={producto}
