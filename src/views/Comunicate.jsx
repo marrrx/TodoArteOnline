@@ -8,6 +8,8 @@ export default function Comunicate() {
 const navigate = useNavigate();
 
 const handleHome = () => {
+  event.preventDefault();
+  alert('Su mensaje fue enviado con éxito.');
   navigate('/');
 };
 
