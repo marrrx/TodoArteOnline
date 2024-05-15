@@ -20,6 +20,7 @@ import AdminProductos from './views/AdminProductos';
 import Dashboard from './views/Dashboard';
 import LoginAdmin from './views/LoginAdmin';
 import AdminCategorias from './views/AdminCategorias';
+import RegistroAdmin from './views/RegistroAdmin';
 
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
               <Route path='/registro' element={<Registro/>} />
 
             </Route>
-            <Route path='/registrarse' element={''} />
+            <Route path='/registrarse' element={<RegistroAdmin />} />
             <Route path='/admin' element={<LoginAdmin />} />
             <Route path='/admin/dashboard' element={<Dashboard />} />
             <Route path='/admin/crud/productos' element={<AdminProductos />} />

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import productos from '../data/productos.json'; // Importa el JSON de productos
 import { useParams } from 'react-router-dom';
 import { MyContext } from '../Context';
-import Reseñas from '../components/Reseñas';
+import Reseñas from '../components/Reseñas';
 
 function DetallesProducto() {
   const { setProductoDeseosGlobal, setProductoGlobal } = useContext(MyContext);
