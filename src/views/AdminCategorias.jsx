@@ -80,7 +80,7 @@ export default function AdminCategorias() {
             <div className='container justify-content-center p-xxl-5'>
                 <div className='row'>
                     <div className='col'>
-                        <button onClick={() => navigate('/admin/dashboard')}>
+                        <button onClick={() => navigate('/admin/panel')}>
                             Regresar
                         </button>
                     </div>

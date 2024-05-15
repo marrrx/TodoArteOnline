@@ -17,10 +17,11 @@ import Preguntas from './views/Preguntas';
 import Acceso from './views/Acceso';
 import Registro from './views/Registro';
 import AdminProductos from './views/AdminProductos';
-import Dashboard from './views/Dashboard';
 import LoginAdmin from './views/LoginAdmin';
 import AdminCategorias from './views/AdminCategorias';
 import RegistroAdmin from './views/RegistroAdmin';
+import AdminUsuarios from './views/AdminUsuariods';
+import AdminPanel from './views/Dashboard';
 
 
 function App() {
@@ -52,9 +53,11 @@ function App() {
             </Route>
             <Route path='/registrarse' element={<RegistroAdmin />} />
             <Route path='/admin' element={<LoginAdmin />} />
-            <Route path='/admin/dashboard' element={<Dashboard />} />
+            <Route path='/admin/panel' element={<AdminPanel />} />
             <Route path='/admin/crud/productos' element={<AdminProductos />} />
             <Route path='/admin/crud/categorias' element={<AdminCategorias />} />
+            <Route path='/admin/crud/usuarios' element={<AdminUsuarios />} />
+
 
 
           </Routes>

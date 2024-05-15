@@ -6,7 +6,7 @@ export default function LoginAdmin() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate('/admin/dashboard');
+        navigate('/admin/panel');
     };
 
     return (

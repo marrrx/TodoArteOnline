@@ -5,7 +5,7 @@ export default function RegistroAdmin() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate('/');
+    navigate('/admin/panel');
   };
 
   return (

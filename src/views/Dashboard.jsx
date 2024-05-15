@@ -4,7 +4,7 @@ import DashboardOrdenes from '../components/AdminComponentes/DashboardOrdenes'
 import DashboardUsers from '../components/AdminComponentes/DashboardUsers'
 import DashboardGrafica from '../components/AdminComponentes/DashboardGrafica'
 
-export default function Dashboard() {
+export default function AdminPanel() {
 
   return (
     <>
