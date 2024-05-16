@@ -29,7 +29,7 @@ function DetallesProducto() {
 
   return (
     <>
-      <div style={{ height: '100vh' }}>
+      <div style={{ height: '100%' }}>
         <div className="container mt-5" style={{ maxWidth: '80%', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', boxShadow: '0 0 20px rgba(0, 0, 0, 0.1)' }}>
           <div className="row">
             <div className="col-md-6 d-flex justify-content-center align-items-center">
