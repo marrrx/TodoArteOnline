@@ -16,7 +16,7 @@ function TarjetaProducto({ producto }) {
     setProductoDeseosGlobal(producto);
   }
   return (
-    <div style={{ width: '18rem', border: '1px solid #ccc', borderRadius: '0.25rem', margin: '1rem', padding: '0.5rem' }}>
+    <div className='shadow p-3 mb-5 mt-3 bg-body-secondary  rounded' style={{ width: '18rem', border: '1px solid #ccc' }}>
       <Link to={`/detalles-producto/${producto.id}`} title='Enlace al producto'>
         <img style={{ height: '300px', width: '100%', objectFit: 'cover' }} src={producto.imagen} alt={producto.nombre} title={producto.nombre} />
       </Link>

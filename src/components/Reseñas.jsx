@@ -30,7 +30,7 @@ function Reseñas() {
     };
 
     return (
-        <div style={{ margin: 30, padding:35 }}>
+        <div style={{ padding:35 }}>
             <h3>Reseñas</h3>
             <hr/>
             <div className='row' >
