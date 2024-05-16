@@ -6,6 +6,7 @@ const MyContextProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
   const [productosDeseos, setProductosDeseos] = useState([]);
   const [categorias, setCategorias] = useState([]);
+  const [search, setSearch] = useState('');
 
 
   const [total, setTotal] = useState(0);
@@ -24,6 +25,9 @@ const MyContextProvider = ({ children }) => {
 
 
 
+  const setSearchGlobal = (value) => {
+    setSearch(value);
+  }
 
 
 
@@ -37,7 +41,7 @@ const MyContextProvider = ({ children }) => {
 
 
   return (
-    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos, setProductoDeseosGlobal, categorias, setCategorias }}>
+    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos, setProductoDeseosGlobal, categorias, setCategorias, search, setSearchGlobal }}>
       {children}
     </MyContext.Provider>
   );

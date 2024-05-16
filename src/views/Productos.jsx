@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import TarjetaProducto from '../components/TarjetaProducto';
+// Productos.js
+import React, { useState, useEffect, useContext } from 'react';
+import TarjetaProducto from '../components/TarjetaProducto'
+import { MyContext } from '../Context';
 
 export default function Productos() {
+    const { search } = useContext(MyContext);
     const [productos, setProductos] = useState([]);
-    const [filtroNombre, setFiltroNombre] = useState('');
     const [orden, setOrden] = useState({ type: 'precio', direction: 'asc' });
 
     useEffect(() => {
@@ -16,10 +18,6 @@ export default function Productos() {
             });
     }, []);
 
-    const filtrarPorNombre = nombre => {
-        setFiltroNombre(nombre);
-    };
-
     const handleOrdenChange = e => {
         const value = e.target.value;
         const [type, direction] = value.split('-');
@@ -27,7 +25,7 @@ export default function Productos() {
     };
 
     const productosFiltrados = productos.filter(producto =>
-        producto.nombre.toLowerCase().includes(filtroNombre.toLowerCase())
+        producto.nombre.toLowerCase().includes(search.toLowerCase())
     );
 
     const ordenarProductos = (a, b) => {
@@ -50,12 +48,6 @@ export default function Productos() {
             <div className='container'>
                 <h2 className='mt-4'>Todos los productos</h2>
                 <div>
-                    <input
-                        type='text'
-                        placeholder='Filtrar por nombre...'
-                        value={filtroNombre}
-                        onChange={e => filtrarPorNombre(e.target.value)}
-                    />
                     <select value={`${orden.type}-${orden.direction}`} onChange={handleOrdenChange}>
                         <option value='precio-asc'>Precio ascendente</option>
                         <option value='precio-desc'>Precio descendente</option>

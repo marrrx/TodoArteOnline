@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Carrito from './Carrito';
 import ListaDeseos from './ListaDeseos';
+import { MyContext } from '../Context';
 
 export default function Navbar() {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
+    const { setSearchGlobal } = useContext(MyContext);
+
 
     const handleHome = () => {
         navigate('/');
@@ -14,6 +17,14 @@ export default function Navbar() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+    const handleSearchChange = (e) => {
+        setSearchGlobal(e.target.value);
+      };
+
+    const handleSearchSubmit = () => {
+        navigate('/productos')
+    };
+      
 
     return (
         <>
@@ -27,8 +38,8 @@ export default function Navbar() {
                         </div>
                         <div className='col-6 d-flex justify-content-center align-items-center'>
                             <form className="d-flex justify-content-center">
-                                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" />
-                                <button className="btn btn-outline-success" type="submit">Buscar</button>
+                                <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" onChange={handleSearchChange}/>
+                                <button className="btn btn-outline-success" type="submit" onClick={handleSearchSubmit}>Buscar</button>
                             </form>
                         </div>
                         <div className='col-1 d-flex justify-content-between align-items-center ms-5  '>
