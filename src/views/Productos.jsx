@@ -1,4 +1,3 @@
-// Productos.js
 import React, { useState, useEffect, useContext } from 'react';
 import TarjetaProducto from '../components/TarjetaProducto'
 import { MyContext } from '../Context';
@@ -47,8 +46,9 @@ export default function Productos() {
         <>
             <div className='container'>
                 <h2 className='mt-4'>Todos los productos</h2>
-                <div>
-                    <select value={`${orden.type}-${orden.direction}`} onChange={handleOrdenChange}>
+                <div style={{ marginBottom: '10px' }}>
+                    <span>Ordenar por: </span>
+                    <select value={`${orden.type}-${orden.direction}`} onChange={handleOrdenChange} style={{ backgroundColor: 'white', color: 'black' }}>
                         <option value='precio-asc'>Precio ascendente</option>
                         <option value='precio-desc'>Precio descendente</option>
                         <option value='alfabetico-asc'>Orden alfabético A-Z</option>
