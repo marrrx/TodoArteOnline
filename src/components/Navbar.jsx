@@ -22,7 +22,7 @@ export default function Navbar() {
       };
 
     const handleSearchSubmit = () => {
-        navigate('/productos')
+        navigate('productos')
     };
       
 
@@ -39,7 +39,9 @@ export default function Navbar() {
                         <div className='col-6 d-flex justify-content-center align-items-center'>
                             <form className="d-flex justify-content-center">
                                 <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" onChange={handleSearchChange}/>
-                                <button className="btn btn-outline-success" type="submit" onClick={handleSearchSubmit}>Buscar</button>
+                                <Link to={'productos'} title='Enlace a productos'>
+                                <button className="btn btn-outline-success">Buscar</button>
+                                </Link>
                             </form>
                         </div>
                         <div className='col-1 d-flex justify-content-between align-items-center ms-5  '>
