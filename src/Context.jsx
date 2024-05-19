@@ -41,7 +41,7 @@ const MyContextProvider = ({ children }) => {
 
 
   return (
-    <MyContext.Provider value={{ productos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos, setProductoDeseosGlobal, categorias, setCategorias, search, setSearchGlobal }}>
+    <MyContext.Provider value={{ productos, setProductos, total, setTotal, setProductoGlobal, productosDeseos, setProductosDeseos, setProductoDeseosGlobal, categorias, setCategorias, search, setSearchGlobal }}>
       {children}
     </MyContext.Provider>
   );

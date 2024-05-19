@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import productos from '../data/productos.json'; // Importa el JSON de productos
 import { MyContext } from '../Context';
-import Reseñas from './Reseñas';
+import Reseñas from './Reseñas';
 
 function DetallesProducto() {
   const { setProductoDeseosGlobal, setProductoGlobal } = useContext(MyContext);
@@ -17,10 +17,12 @@ function DetallesProducto() {
 
   const agregarCarrito = () => {
     setProductoGlobal(producto);
+    alert('Producto añadido al carrito');
   }
 
   const agregarLista = () => {
     setProductoDeseosGlobal(producto);
+    alert('Producto añadido a la lista de deseos');
   }
 
   const handleTabClick = (tabId) => {
