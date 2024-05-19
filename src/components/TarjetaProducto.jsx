@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import { MyContext } from '../Context';
+import swal from 'sweetalert';
 
 function TarjetaProducto({ producto }) {
   const { setProductoDeseosGlobal, setProductoGlobal } = useContext(MyContext);
@@ -11,12 +12,19 @@ function TarjetaProducto({ producto }) {
 
   const agregarCarrito = () => {
     setProductoGlobal(producto);
-    alert('Producto añadido al carrito');
+    swal({
+      text: "Producto agregado al carrito",
+      icon: "success"
+    });  
   }
+
   const agregarLista = () => {
     setProductoDeseosGlobal(producto);
-    alert('Producto añadido a la lista de deseos');
-  }
+    swal({
+      text: "Producto agregado a la lista de deseos",
+      icon: "success"
+    });   
+   }
   return (
     <div className='shadow p-3 mb-5 mt-3 bg-body-secondary  rounded' style={{ width: '18rem', border: '1px solid #ccc' }}>
       <Link to={`/detalles-producto/${producto.id}`} title='Enlace al producto'>
