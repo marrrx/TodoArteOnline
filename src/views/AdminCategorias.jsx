@@ -12,6 +12,23 @@ export default function AdminCategorias() {
     const nombreCategoriaRef = useRef();
 
     useEffect(() => {
+        import('../data/categorias.json')
+            .then(data => {
+                const initialCategorias = data.default.map((nombre, index) => ({
+                    id: index + 1,
+                    nombre
+                }));
+                setCategorias(initialCategorias);
+                setIdCategorias(initialCategorias.length);
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+            });
+    }, [setCategorias]);
+
+
+
+    useEffect(() => {
         const modalElement = modalRef.current;
         const modalInstance = new Modal(modalElement, {
             backdrop: 'static',
@@ -73,6 +90,7 @@ export default function AdminCategorias() {
     const handleEliminarCategoria = (id) => {
         setCategorias(categorias.filter(categoria => categoria.id !== id));
     };
+
     const navigate = useNavigate();
 
     return (

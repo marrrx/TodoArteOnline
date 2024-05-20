@@ -45,6 +45,7 @@ export default function AdminProductos() {
     const handleClickModal = (product = null) => {
         setIsEditing(product !== null);
         setCurrentProduct(product);
+        console.log(product)
         if (modalInstance) {
             modalInstance.show();
         }
