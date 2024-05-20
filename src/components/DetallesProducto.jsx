@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import productos from '../data/productos.json'; // Importa el JSON de productos
 import { MyContext } from '../Context';
-import Reseñas from './Reseñas';
+import Reseñas from './Reseñas';
 import swal from 'sweetalert';
 
 function DetallesProducto() {
