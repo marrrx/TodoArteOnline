@@ -58,7 +58,7 @@ export default function Navbar() {
                     </ul>
                     <form className="d-flex ms-auto" onSubmit={handleSearchSubmit}>
                         <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" onChange={handleSearchChange} />
-                        <button className="btn btn-outline-success" type="submit">Buscar</button>
+                        <button className="btn btn-primary" type="submit">Buscar</button>
                     </form>
                     <br />
                     <div className="dropdown ms-3">
